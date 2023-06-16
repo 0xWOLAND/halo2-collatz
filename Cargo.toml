@@ -5,8 +5,14 @@ edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+
+[lib]
+crate-type = ["cdylib"]
+
 [dependencies]
 halo2_proofs = { git = "https://github.com/privacy-scaling-explorations/halo2.git" }
+wasm-bindgen = { version = "0.2.87" }
+getrandom = { version = "0.2", features = ["js"] }
 
 [dev-dependencies]
 assert_matches = "1.5"
